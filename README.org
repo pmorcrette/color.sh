@@ -6,6 +6,7 @@ color.sh is pretty straightforward in it's usage :
 source color.sh && echo -e "The $(green "OK") is in green"
 #+end_src
 [[file:screenshot/ok.png]]
+
 And for a simple hello world script
 #+begin_src shell
 #!/bin/env bash
@@ -14,6 +15,7 @@ echo -e "$(red "hello"),$(green "world!")"
 exit 0
 #+end_src
 [[file:screenshot/helloworld.png]]
+
 Basically it is a few bash function which append code colors to the string and return the value to echo (do not forget the -e to echo) through a subshell.
 
 It might look a bit convoluted to use like that but there is a more practical way of doing it in case of specific and regular text used with specific color like red with fail and orange with warning.
