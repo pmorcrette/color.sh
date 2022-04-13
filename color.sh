@@ -17,9 +17,6 @@ LPURPLE='\033[1;35m' # LIGHT PURPLE
 LCYAN='\033[1;36m' # LIGHT CYAN
 WHITE='\033[1;37m' # WHITE
 
-colored_echo() {
-	echo -e $@
-}
 black() {
 	echo "${BLACK}$@${NC}"
 }
