@@ -48,10 +48,12 @@ The output :
 *** color.sh can be used in two way
 **** 1) Shipped as an external script as above
 **** 2) Shipped inside of your script
-To ship it inside of your script you can either copy paste it's code manually at the beginning of your script or use this oneliner
+To inject it inside of your script you can either copy paste it's code manually at the beginning of your script or use this oneliner (Do not forget to rename yourscript.sh with the name of your script).
 #+begin_src shell
 script=yourscript.sh; cat test.sh $script > insert.tmp && cat insert.tmp > $script && rm insert.tmp
 #+end_src
+P.S: Please always make a backup of your script before running this ...
+P.S2: Please always read the code comming from some random dude on the internet before using it.
 ** Color list function
 
 - black
