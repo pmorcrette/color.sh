@@ -5,6 +5,9 @@ color.sh is pretty straightforward in it's usage :
 #+begin_src shell
 source color.sh && echo -e "The $(green "OK") is in green"
 #+end_src
+
+The output:
+
 [[file:screenshot/ok.png]]
 
 And for a simple hello world script
@@ -14,6 +17,9 @@ source color.sh
 echo -e "$(red "hello"),$(green "world!")"
 exit 0
 #+end_src
+
+The output:
+
 [[file:screenshot/helloworld.png]]
 
 Basically it is a few bash function which append code colors to the string and return the value to echo (do not forget the -e to echo) through a subshell.
@@ -34,6 +40,9 @@ echo -e "[$warn] - some warnings"
 echo -e "[$info] - some information"
 exit 0
 #+end_src
+
+The output :
+
 [[file:screenshot/exemple.png]]
 ** Installation
 *** color.sh can be used in two way
