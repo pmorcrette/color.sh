@@ -1,0 +1,66 @@
+* color.sh
+color.sh is a small bash script to ease the use of basic color in bash
+** Usage
+color.sh is pretty straightforward in it's usage :
+#+begin_src shell
+source color.sh && echo -e "The $(green "OK") is in green"
+#+end_src
+[[file:screenshot/ok.png]]
+And for a simple hello world script
+#+begin_src shell
+#!/bin/env bash
+source color.sh
+echo -e "$(red "hello"),$(green "world!")"
+exit 0
+#+end_src
+[[file:screenshot/helloworld.png]]
+Basically it is a few bash function which append code colors to the string and return the value to echo (do not forget the -e to echo) through a subshell.
+
+It might look a bit convoluted to use like that but there is a more practical way of doing it in case of specific and regular text used with specific color like red with fail and orange with warning.
+
+#+begin_src shell
+#!/bin/env bash
+source color.sh
+failed=$(red "FAIL")
+ok=$(green "SUCCESS")
+warn=$(orange "WARNING")
+info=$(light_blue "INFO")
+
+echo -e "[$ok] - some things were done successfully"
+echo -e "[$failed] - some things were done unsuccessfully"
+echo -e "[$warn] - some warnings"
+echo -e "[$info] - some information"
+exit 0
+#+end_src
+[[file:screenshot/exemple.png]]
+** Installation
+*** color.sh can be used in two way
+**** 1) Shipped as an external script as above
+**** 2) Shipped inside of your script
+To ship it inside of your script you can either copy paste it's code manually at the beginning of your script or use this oneliner
+#+begin_src shell
+script=yourscript.sh; cat test.sh $script > insert.tmp && cat insert.tmp > $script && rm insert.tmp
+#+end_src
+** Color list function
+
+- black
+- red
+- green
+- orange
+- blue
+- purple
+- cyan
+- light_gray
+- dark_gray
+- light_red
+- light_green
+- yellow
+- light_blue
+- light_purple
+- light_cyan
+- white
+
+These functions are used like this :
+#+begin_src shell
+light_purple "some text in black"
+#+end_src
