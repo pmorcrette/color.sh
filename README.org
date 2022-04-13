@@ -24,7 +24,7 @@ The output:
 
 Basically it is a few bash function which append code colors to the string and return the value to echo (do not forget the -e to echo) through a subshell.
 
-It might look a bit convoluted to use like that but there is a more practical way of doing it in case of specific and regular text used with specific color like red with fail and orange with warning.
+It might look a bit convoluted to use like that but there is a more practical way of doing it.
 
 #+begin_src shell
 #!/bin/env bash
