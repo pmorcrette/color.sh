@@ -53,6 +53,7 @@ To inject it inside of your script you can either copy paste it's code manually 
 script=yourscript.sh; cat test.sh $script > insert.tmp && cat insert.tmp > $script && rm insert.tmp
 #+end_src
 P.S: Please always make a backup of your script before running this ...
+
 P.S2: Please always read the code comming from some random dude on the internet before using it.
 ** Color list function
 
