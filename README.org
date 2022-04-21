@@ -31,7 +31,7 @@ It might look a bit convoluted to use like that but there is a more practical wa
 source color.sh
 failed=$(red "FAIL")
 ok=$(green "SUCCESS")
-warn=$(orange "WARNING")
+warn=$(yellow "WARNING")
 info=$(light_blue "INFO")
 
 echo -e "[$ok] - some things were done successfully"
@@ -60,15 +60,15 @@ P.S2: Please always read the code comming from some random dude on the internet 
 - black
 - red
 - green
-- orange
+- yellow
 - blue
 - purple
 - cyan
-- light_gray
 - dark_gray
+- light_gray
 - light_red
 - light_green
-- yellow
+- light_yellow
 - light_blue
 - light_purple
 - light_cyan
@@ -76,5 +76,5 @@ P.S2: Please always read the code comming from some random dude on the internet 
 
 These functions are used like this :
 #+begin_src shell
-light_purple "some text in black"
+light_purple "some text in a light purple"
 #+end_src
